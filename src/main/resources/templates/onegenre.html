@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+	<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<title>Dereks Movie Reviews</title>
+	</head>
+	<body>
+	<header>
+		<h1>Derek's Movie Reviews by One Genre</h1>
+	</header>
+
+		   
+				<a th:each="review: ${onegenre.reviews}" th:href="@{/onereview/(id=${review.id})}"><div th:text="${review.movieTitle}" ></div></a>
+			
+		
+		<!-- <a th:each="genre: ${genreAsCollection}" th:href="@{/reviews/(id=${review.id})}"><div th:text="${genre.movieTitle}" ></div></a>
+		 -->
+		
+		<footer>
+			<p> Derek's Movie Reviews</p>
+		</footer>
+
+	</body>
+	</html>

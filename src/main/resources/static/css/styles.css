@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-image:url("/images/curtains.jpg");
+}
+
+header{
+  background: red;
+  background-image: url("/images/subtle-stripes.png");
+  border-style: solid;
+  border-color: black;
+  text-align: center;
+  font-family: verdana;
+  font-size:40px;
+  color: #fff;
+  padding: 40px;
+}
+
+
+.layout__body {
+  display: flex;
+  flex: 1;
+}
+
+.main {
+  flex: 1;
+}
+.layout__columns {
+  flex: 0 0 12em;
+  border-style: solid;
+  border-color: black;
+}
+.layout__nav {
+  order: -1;
+}
+
+.main{
+  background: lightgray;
+}
+
+.layout__columns {
+  background: red;
+  background-image: url("/images/subtle-stripes.png");
+}
+
+footer {
+  background: black;
+  text-align: center;
+  color: #fff;
+  padding: 5px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 30px;
+}
+html,body {
+  height: 100%;
+  margin: 0;
+  font-family: Helvetica;
+  font-size: 20px;
+}

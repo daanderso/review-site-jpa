@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Derek' Movie Reviews</title>
+<!-- 	<link rel="stylesheet" type="text/css" href="/css/styles.css"/> -->
+</head>
+<body>
+	<header>
+		<h1>Derek's Movie Reviews</h1>
+	</header>
+	<div class="layout__body">
+		<div class="main">
+			<h1>Movie Titles</h1>
+			<a th:each="review: ${reviewsAsCollection}" th:href="@{http://localhost:8080/onereview/(id=${review.id})}"><div th:text="${review.movieTitle}" ></div></a>
+		</div>
+		<nav class="layout__nav layout__columns"></nav>
+		<div class="layout__columns"></div>
+	</div>
+	
+	<footer>
+		<p> Derek's Movie Reviews</p>
+	</footer>
+
+</body>
+</html>
