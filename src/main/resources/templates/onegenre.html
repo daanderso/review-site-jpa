@@ -6,15 +6,11 @@
 	<body>
 	<header>
 		<h1>Derek's Movie Reviews by One Genre</h1>
-	</header>
-
-		   
-				<a th:each="review: ${onegenre.reviews}" th:href="@{/onereview/(id=${review.id})}"><div th:text="${review.movieTitle}" ></div></a>
-			
-		
-		<!-- <a th:each="genre: ${genreAsCollection}" th:href="@{/reviews/(id=${review.id})}"><div th:text="${genre.movieTitle}" ></div></a>
-		 -->
-		
+	</header>   
+		<a th:each="review: ${onegenre.reviews}" th:href="@{/onereview/(id=${review.id})}"><div th:text="${review.movieTitle}" ></div></a>
+	
+		<p><a href="./genreList">Back to Movies by Genre</a></p>
+		<p><a href="./reviews">Back to Movie Reviews</a></p>	
 		<footer>
 			<p> Derek's Movie Reviews</p>
 		</footer>

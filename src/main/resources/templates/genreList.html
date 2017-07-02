@@ -1,52 +1,21 @@
-	<!DOCTYPE html>
-	<html xmlns:th="http://www.thymeleaf.org">
-	<head>
-	<title>Dereks Movie Reviews</title>
-	</head>
-	<body>
-	<header>
-		<h1>Derek's Movie Reviews by Genre</h1>
-
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Dereks Movie Reviews</title>
+</head>
+<body>
+<header>
+	<h1>Derek's Movie Reviews by Genre</h1>
+</header>
 
 	<a th:each="genre:${genreAsCollection}" th:href="@{/onegenre(id=${genre.id})}">
-    <div th:text="${genre.title}"></div></a>
-		
-	 	
+<div th:text="${genre.title}"></div></a>
+	
+	<p><a href="./reviews">Back to Movie Reviews</a></p>
+	
+	<footer>
+		<p> Derek's Movie Reviews</p>
+	</footer>
 
-	 	<!-- <div th:each="genre:${genreAsCollection}">
-			<p>Genre title: <span th:text="${genre.title}" /></p>
-			<a th:each="review: ${genre.reviews}" th:href="@{/onereview/(id=${review.id})}"><div th:text="${review.movieTitle}" ></div></a>
-		</div>
-		 -->
-		
-
-		<!-- <a th:each="genre: ${genreAsCollection}" th:href="@{/reviews/(id=${review.id})}"><div th:text="${genre.movieTitle}" ></div></a> -->
-
-		<!-- <p th:each="genre:${genreAsCollection}" th:text="${genre.title}" /> -->
-				
-		<!-- <p th:each="genre:${genreAsCollection}" th:text="${genre.reviews}"/> -->
-		
-		
-		<!-- <div th:each="genre:${genreAsCollection}">
-			<p>Genre title: <span th:text="${genre.title}" /></p>
-			<p th:each="review: ${genre.reviews}" th:text="${review.movieTitle}" />
-		</div> -->
-		
-		
-	</header>
-		
-<!-- 		<div class="layout__body">
-			<div class="main">
-				<h1>Movie Titles</h1>
-				<a th:each="current: ${genre.reviews}" th:href="@{http://localhost:8080/genre/(id=${current.id})}"><div th:text="${current.title}" ></div></a>
-			</div>
-			<nav class="layout__nav layout__columns"></nav>
-			<div class="layout__columns"></div>
-		</div> -->
-		
-		<footer>
-			<p> Derek's Movie Reviews</p>
-		</footer>
-
-	</body>
-	</html>
+</body>
+</html>
