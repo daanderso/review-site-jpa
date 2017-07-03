@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Dereks Movie Reviews</title>
+    <title>Dereks Movie Reviews</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles2.css"/>
 </head>
 <body>
-<header>
-	<h1>Derek's Movie Reviews by Genre</h1>
-</header>
-
-	<a th:each="genre:${genreAsCollection}" th:href="@{/onegenre(id=${genre.id})}">
-<div th:text="${genre.title}"></div></a>
-	
-	<p><a href="./reviews">Back to Movie Reviews</a></p>
-	
-	<footer>
-		<p> Derek's Movie Reviews</p>
-	</footer>
-
+    <header>
+      <div class="header-txt">
+        <h1>Derek's Movie Reviews</h1>
+      </div>
+      <button class="button button1"><a href="./reviews">Movies Reviews Home</a></button>
+    </header>
+    <section id='main'>
+      <article>
+        <h1>Derek's Movie Reviews by Genre</h1>
+          <div>
+            <a th:each="genre:${genreAsCollection}" th:href="@{/onegenre(id=${genre.id})}">
+          <div th:text="${genre.title}"></div></a>
+          </div>
+      </article> 
+      <nav>
+        <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
+      </nav>
+      <aside>
+        <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
+      </aside>
+    </section>
+    <footer>
+      <h3>Derek's Movie Reviews</h3>
+    </footer>
 </body>
 </html>
