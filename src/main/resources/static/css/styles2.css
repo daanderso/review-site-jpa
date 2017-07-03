@@ -1,0 +1,113 @@
+body {
+  background: #999999;
+  font: 14px Helvetica;
+}
+
+#main {
+  margin: 0;
+  padding: 0;
+  min-height: 800px;
+  display: flex;
+  flex-flow: row;
+}
+
+article {
+  margin: 4px;
+  padding: 5px;
+  border: 1px solid #8888bb;
+  border-radius: 7pt;
+  /*background: #dddd88;*/
+  background:cornsilk;
+  flex: 3 1 60%;
+  order: 2;
+}
+
+nav {
+  margin: 4px;
+  padding: 5px;
+  border: 1px solid #8888bb;
+  border-radius: 7pt;
+  background: #ccccff;
+  flex: 1 6 20%;
+  order: 1;
+}
+
+aside {
+  margin: 4px;
+  padding: 5px;
+  border: 1px solid #8888bb;
+  border-radius: 7pt;
+  background: #ccccff;
+  flex: 1 6 20%;
+  order: 3;
+}
+
+.header-txt {
+text-align: center;
+font: 24px Helvetica;
+}
+
+header {
+  display: block;
+  margin: 4px;
+  padding: 5px;
+  min-height: 100px;
+  border: 1px solid black;
+  border-radius: 7pt;
+  background: #ffeebb;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  font: 24px Helvetica;
+  margin: 4px;
+  padding: 5px;
+  min-height: 100px;
+  border: 1px solid black;
+  border-radius: 7pt;
+  background: #ffeebb;
+}
+
+/*@media all and (max-width: 640px) {
+  #main, #page {
+    flex-flow: column;
+    flex-direction: column;
+  }*/
+
+  article nav aside {
+    order: 0;
+  }
+
+  nav aside header footer {
+    min-height: 50px;
+    max-height: 50px;
+  }
+
+.button {
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: lightgray; 
+    color: black; 
+    border: 2px solid blue;
+}
+
+.button1:hover {
+    background-color: orange;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    color: white;
+}
+
+}

@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Derek' Movie Reviews</title>
-<!-- 	<link rel="stylesheet" type="text/css" href="/css/styles.css"/> -->
+    <title>Dereks Movie Reviews</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles2.css"/>
 </head>
 <body>
-	<header>
-		<h1>Derek's Movie Reviews</h1>
-	</header>
-	<div class="layout__body">
-		<div class="main">
-			<h1>Movie Titles</h1>
-			<a th:each="review: ${reviewsAsCollection}" th:href="@{http://localhost:8080/onereview/(id=${review.id})}"><div th:text="${review.movieTitle}" ></div></a>
-		</div>
-		<nav class="layout__nav layout__columns"></nav>
-		<div class="layout__columns"></div>
-	</div>
-	<p><a href="./genreList">Movies by Genre</a></p>
-	<footer>
-		<p> Derek's Movie Reviews</p>
-	</footer>
+
+<header>
+<div class="header-txt">
+<h1>Derek's Movie Reviews</h1>
+</div>
+
+<button class="button button1"><a href="#aboutmeheader">Home</a></button>
+
+<button class="button button1"><a href="./genreList">Movies by Genre</a></button>
+
+
+</header>
+<section id='main'>
+<article>
+<h1>Movie Titles</h1>
+<div>
+<a th:each="review: ${reviewsAsCollection}" th:href="@{http://localhost:8080/onereview/(id=${review.id})}"><div th:text="${review.movieTitle}" ></div></a>
+
+
+</div>
+</article>
+  
+  <nav>
+  <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
+  <!-- <p>
+    <button class="button button1"><a href="#aboutmeheader">Home</a></button>
+  </p>
+  
+  <p>
+    <button class="button button1"><a href="#aboutmeheader">Genre</a></button>
+  </p> -->
+  <!-- <li><button><a href="#aboutmeheader">About Me</a></button></li> --> 
+  </nav>
+
+  <aside>
+    <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
+  </aside>
+</section>
+
+<footer>
+<h3>Derek's Movie Reviews</h3>
+</footer>
 
 </body>
 </html>
