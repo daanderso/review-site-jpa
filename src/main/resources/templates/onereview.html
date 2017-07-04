@@ -14,17 +14,14 @@
     </header>
     <section id='main'>
       <article>
-        <h1>Here are the reviews:</h1>
           <div>
             <img th:src="${onereview.imageUrl}"/>
-
             <p th:text="'Id: ' + ${onereview.id}"></p>
             <p th:text="'Title: ' + ${onereview.movieTitle}"></p>
             <p th:text="'Category: ' + ${onereview.genre.title}"></p>
             <p th:text="'Review: ' + ${onereview.content}"></p>
             <p th:text="'Date: ' + ${onereview.date}"></p>
             <p th:text="'Synopsis: ' + ${onereview.synopsis}"></p>
-
           </div>
       </article> 
         <nav>

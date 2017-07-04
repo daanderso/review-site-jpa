@@ -14,8 +14,11 @@
   </header>
   <section id='main'>
     <article>
-      <h1>Movie Titles</h1>
-        <div>
+      <!-- <h1>Movie Titles</h1> -->
+        <div class="banner">
+          <img src="/images/titlebanner.jpg" alt="Movie banner Icon" />
+        </div> 
+        <div class="reviewtxt">
           <a th:each="review: ${reviewsAsCollection}" th:href="@{http://localhost:8080/onereview/(id=${review.id})}"><div th:text="${review.movieTitle}" ></div></a>
         </div>
     </article>

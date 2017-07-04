@@ -13,7 +13,10 @@
     </header>
     <section id='main'>
       <article>
-        <h1>Derek's Movie Reviews by Genre</h1>
+        <!-- <h1>Movie Reviews by Genre</h1> -->
+        <div class="banner">
+          <img src="/images/genrebanner.jpg" alt="Movie banner Icon" />
+        </div>
           <div>
             <a th:each="genre:${genreAsCollection}" th:href="@{/onegenre(id=${genre.id})}">
           <div th:text="${genre.title}"></div></a>
