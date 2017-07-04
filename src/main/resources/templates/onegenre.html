@@ -19,12 +19,12 @@
             <a th:each="review: ${onegenre.reviews}" th:href="@{/onereview/(id=${review.id})}"><div th:text="${review.movieTitle}" ></div></a>
           </div>
       </article> 
-      <nav>
-        <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
-      </nav>
-      <aside>
-        <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
-      </aside>
+        <nav>
+          <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
+        </nav>
+        <aside>
+          <img src="/images/movie-strip.jpg" alt="Movie Reel Icon" />
+        </aside>
     </section>
     <footer>
       <h3>Derek's Movie Reviews</h3>
