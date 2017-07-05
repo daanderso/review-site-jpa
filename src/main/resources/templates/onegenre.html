@@ -14,7 +14,9 @@
     </header>
     <section id='main'>
       <article>
-        <h1>Here are the reviews:</h1>
+          <div class="banner">
+            <img src="/images/reviewsbanner.jpg" alt="Movie banner Icon" />
+          </div>
           <div>
             <a th:each="review: ${onegenre.reviews}" th:href="@{/onereview/(id=${review.id})}"><div th:text="${review.movieTitle}" ></div></a>
           </div>
